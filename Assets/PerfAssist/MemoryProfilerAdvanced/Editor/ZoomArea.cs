@@ -409,7 +409,7 @@ public class ZoomArea
 
         switch (Event.current.GetTypeForControl(id))
         {
-#if UNITY_2017_4_OR_NEWER
+#if UNITY_2017_3_OR_NEWER
         case EventType.MouseDown:
 #else
         case EventType.mouseDown:
@@ -429,7 +429,7 @@ public class ZoomArea
                 }
             }
             break;
-#if UNITY_2017_4_OR_NEWER
+#if UNITY_2017_3_OR_NEWER
         case EventType.MouseUp:
 #else
         case EventType.mouseUp:
@@ -445,7 +445,7 @@ public class ZoomArea
                 //Event.current.Use();
             }
             break;
-#if UNITY_2017_4_OR_NEWER
+#if UNITY_2017_3_OR_NEWER
         case EventType.MouseDrag:
 #else
         case EventType.mouseDrag:
@@ -465,7 +465,7 @@ public class ZoomArea
                 Event.current.Use();
             }
             break;
-#if UNITY_2017_4_OR_NEWER
+#if UNITY_2017_3_OR_NEWER
         case EventType.ScrollWheel:
 #else
         case EventType.scrollWheel:
