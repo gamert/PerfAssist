@@ -86,7 +86,7 @@ public class UsMain_NetHandlers
         if (usmooth.DataCollector.Instance == null)
             return true;
 
-        FrameData data = usmooth.DataCollector.Instance.CollectFrameData();
+        UsFrameData data = usmooth.DataCollector.Instance.CollectFrameData();
 
         UsNet.Instance.SendCommand(data.CreatePacket());
         UsNet.Instance.SendCommand(usmooth.DataCollector.Instance.CreateMaterialCmd());

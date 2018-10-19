@@ -27,8 +27,7 @@ SOFTWARE.
 using System.Collections;
 using System.Collections.Generic;
 
-
-public class FrameData
+public class UsFrameData
 {
     public int _frameCount = 0;
 
@@ -57,7 +56,7 @@ public class FrameData
     }
 }
 
-public class MeshData
+public class UsMeshData
 {
     public int _instID;
     public int _vertCount;

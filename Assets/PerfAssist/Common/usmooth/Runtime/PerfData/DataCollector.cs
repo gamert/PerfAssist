@@ -43,7 +43,7 @@ namespace usmooth
 
         public static GameObject MainCamera = null;
 
-        public FrameData CollectFrameData()
+        public UsFrameData CollectFrameData()
         {
             _visibleMaterials.Clear();
             _visibleTextures.Clear();
@@ -58,7 +58,7 @@ namespace usmooth
             }
 
             //Debug.Log(string.Format("creating frame data. {0}", Time.frameCount));
-            _currentFrame = new FrameData();
+            _currentFrame = new UsFrameData();
             _currentFrame._frameCount = Time.frameCount;
             _currentFrame._frameDeltaTime = Time.deltaTime;
             _currentFrame._frameRealTime = Time.realtimeSinceStartup;
@@ -224,8 +224,8 @@ namespace usmooth
             return cmd;
         }
 
-        private FrameData _currentFrame;
-        private List<FrameData> _frames = new List<FrameData>();
+        private UsFrameData _currentFrame;
+        private List<UsFrameData> _frames = new List<UsFrameData>();
 
         #region Gathered Meshes/Materials/Textures
 

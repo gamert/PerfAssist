@@ -51,7 +51,7 @@ public class MeshLut
             return false;
         }
 
-        MeshData md = new MeshData();
+        UsMeshData md = new UsMeshData();
         md._instID = go.GetInstanceID();
         md._vertCount = mf.mesh.vertexCount;
         md._materialCount = go.GetComponent<Renderer>().sharedMaterials.Length;
@@ -63,7 +63,7 @@ public class MeshLut
 
     public void WriteMesh(int instID, UsCmd cmd)
     {
-        MeshData data;
+        UsMeshData data;
         if (_lut.TryGetValue(instID, out data))
         {
             data.Write(cmd);
@@ -75,5 +75,5 @@ public class MeshLut
         _lut.Clear();
     }
 
-    Dictionary<int, MeshData> _lut = new Dictionary<int, MeshData>();
+    Dictionary<int, UsMeshData> _lut = new Dictionary<int, UsMeshData>();
 }
